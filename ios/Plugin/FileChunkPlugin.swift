@@ -22,7 +22,7 @@ public class FileChunkPlugin: CAPPlugin {
         let tPortMin = UInt(call.getInt("portMin", 49151));
         let tPortMax = UInt(call.getInt("portMax", 65536));
         let tRetries = UInt(call.getInt("retries", 5));
-        var tChunkSize = UInt(call.getInt("chunkSize", 10024000));
+        let tChunkSize = UInt(call.getInt("chunkSize", 10024000));
         
         // SET THE MAXIMUM CONTENT LENGTH
         mMaxBodySize = tChunkSize;
