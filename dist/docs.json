@@ -1,0 +1,226 @@
+{
+  "api": {
+    "name": "FileChunkPlugin",
+    "slug": "filechunkplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "startServer",
+        "signature": "(options: FileChunkConfiguration) => Promise<FileChunkServerInfo>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "FileChunkConfiguration"
+          }
+        ],
+        "returns": "Promise<FileChunkServerInfo>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "FileChunkServerInfo",
+          "FileChunkConfiguration"
+        ],
+        "slug": "startserver"
+      },
+      {
+        "name": "stopServer",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stopserver"
+      },
+      {
+        "name": "readFileChunk",
+        "signature": "(options: FileChunkReadChunk) => Promise<FileChunkReadChunkResponse>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "FileChunkReadChunk"
+          }
+        ],
+        "returns": "Promise<FileChunkReadChunkResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "FileChunkReadChunkResponse",
+          "FileChunkReadChunk"
+        ],
+        "slug": "readfilechunk"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "FileChunkServerInfo",
+      "slug": "filechunkserverinfo",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "version",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "platform",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'error' | 'web' | 'android' | 'ios'"
+        },
+        {
+          "name": "baseUrl",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "authToken",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "chunkSize",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "encryptionType",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'none' | 'ChaCha20-Poly1305'"
+        },
+        {
+          "name": "ready",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "FileChunkConfiguration",
+      "slug": "filechunkconfiguration",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "key",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "encryption",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "port",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "portMin",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "portMax",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "retries",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "chunkSize",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "FileChunkReadChunkResponse",
+      "slug": "filechunkreadchunkresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "data",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "FileChunkReadChunk",
+      "slug": "filechunkreadchunk",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "path",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "length",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
